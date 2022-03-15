@@ -1,7 +1,10 @@
 import express from 'express'
+import { connect } from './config/mongoDB'
 
 const port = 5000
 const app = express()
+
+connect()
 
 app.get('/', (req, res) => {
     res.send('hello world')
