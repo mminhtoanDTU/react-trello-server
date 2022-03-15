@@ -1,7 +1,9 @@
 import express from 'express'
 import { connect } from './config/mongoDB'
+import { env } from '*/config/environment'
 
-const port = 5000
+const port = env.PORT
+const HOST = env.HOSTNAME
 const app = express()
 
 connect()
